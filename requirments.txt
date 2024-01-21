@@ -1,0 +1,8 @@
+- pygame
+- threading
+- random
+- math
+- sys
+- os
+- sqlite
+- json
