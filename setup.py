@@ -1,9 +1,8 @@
-import cx_Freeze
-
-executables = [cx_Freeze.Executable("game.py", base="Win32GUI")]
-
-cx_Freeze.setup(
-    name="RedHood",
-    options={"build_exe": {"packages":["pygame"], "include_files": ["resource"]}},
-    executables=executables
+from distutils.core import setup
+import py2exe, sys, os
+sys.argv.append('py2exe')
+setup(
+    options={'py2exe': {'bundle_files': 1, 'compressed': True}},
+    windows=[{'script': "game.py"}],
+    zipfile=None,
 )
